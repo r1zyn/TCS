@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.tcsDark {
+  background-color: rgb(26, 26, 26);
+}
+
+.tcsGraident {
+  background-image: linear-gradient(90deg,
+      rgb(188, 154, 247, 1) 0%,
+      rgba(181, 148, 213, 1) 43%,
+      rgba(127, 75, 200, 1) 100%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.animation {
+  background-image: linear-gradient(90deg,
+      rgb(188, 154, 247, 1) 0%,
+      rgba(181, 148, 213, 1) 43%,
+      rgba(127, 75, 200, 1) 100%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.animation:hover {
+  background-image: linear-gradient(90deg,
+      rgb(144, 111, 202) 0%,
+      rgb(133, 86, 180) 43%,
+      rgb(89, 32, 168) 100%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: 5s infinite;
+}
+
+.tcsGraident2 {
+  background-image: linear-gradient(90deg,
+      rgb(173, 127, 218, 1) 0%,
+      rgba(163, 104, 230, 1) 43%,
+      rgba(127, 75, 200, 1) 100%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tcsDark2 {
+  background-color: rgb(32, 32, 32);
+}
+
+.trackin {
+  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #9373f5;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #9373f5;
+}
+
+.motivatingBG {
+  background-repeat: no-repeat;
+  background-image: url("https://static6.depositphotos.com/1002941/553/i/450/depositphotos_5537685-stock-photo-men-greeting-sun.jpg");
+}
+
+.knowledge {
+  background-repeat: no-repeat;
+  background-image: url('https://media.discordapp.net/attachments/918706514645119006/993250843782565948/know.png?width=487&height=408');
+}
+
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-device-width: 1200px) {
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+}
+
+
+.burger {
+  width: 45px;
+  height: 45px;
+  border-radius: 7px;
+  background: rgb(56 56 56);;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  transition: all .5s ease;
+  margin: 1em;
+}
+
+.burger-strip {
+  transition: all .5s ease;
+}
+
+.strip div {
+  height: 3px;
+  border-radius: 2px;
+  background: white;
+  margin: 10px;
+  transition: all .55s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 40px;
+}
+
+#overlay {
+  margin-top: 45px;
+  border-radius: 7px;
+  position: fixed;
+  width: 140px;
+  min-height: 190px;
+  background-color: #3b3939;
+  z-index: 2;
+  transform: translateY(-100%);
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#overlay.menu {
+  transform: translateY(50%);
+  margin-right: -10.5px;
+}
+
+#overlay a {
+  text-decoration: none;
+  color: #fafafa;
+  font-size: clamp(1rem, 4.1vw + 0.2rem, 10rem);
+  margin: 2%;
+  opacity: 0.5;
+  transition: opacity 0.2s linear;
+}
